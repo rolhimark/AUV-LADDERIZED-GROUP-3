@@ -1,2 +1,0 @@
-void initCamera();
-void captureAndDetectObjects();
