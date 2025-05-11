@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>AUV Dashboard</title></head>
+<body>
+  <h2>AUV Status</h2>
+  <div id="status">Loading...</div>
+  <button onclick="fetchStatus()">Refresh</button>
+
+  <script>
+    async function fetchStatus() {
+      const res = await fetch('/status');
+      const data = await res.json();
+      document.getElementById('status').innerText = JSON.stringify(data);
+    }
+    fetchStatus();
+  </script>
+</body>
+</html>
