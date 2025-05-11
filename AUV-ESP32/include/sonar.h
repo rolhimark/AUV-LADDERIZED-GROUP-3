@@ -1,0 +1,2 @@
+void initSonar();
+float readSonar();
